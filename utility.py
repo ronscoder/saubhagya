@@ -29,7 +29,7 @@ class Utility:
         if(status == 'E'):
             statc = bcolors.FAIL
             
-        m = '{:30}\t{}'.format(label, value)
+        m = '{:30}\t{}'.format(label[:30], value) if not value=='' else '{}'.format(label)
         print(statc + m + bcolors.ENDC)
         return m
         
